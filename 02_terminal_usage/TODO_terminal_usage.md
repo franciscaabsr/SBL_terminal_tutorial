@@ -3,12 +3,12 @@
 Francisca Ayres Ribeiro November 2025
 
 ### Table of contents
-- [Enter storm from X2goClient](#enter-storm_x2goclient)
-- [Open terminal] (#open-terminal)
-- [Check RAM, CPU and computer cores] (#check-ram-cpu-cores)
-- [Basic commands for working in terminal] (#basic-commands)
-- [Work with files and folders] (#files-folders)
-- [Final cheatcodes] (#cheat-codes)
+- [Enter storm from X2goClient](#enter-storm-x2goclient)
+- [Open terminal](#open-terminal)
+- [Check RAM, CPU and computer cores](#check-ram-cpu-cores)
+- [Basic commands for working in terminal](#basic-commands)
+- [Work with files and folders](#files-folders)
+- [Final cheatcodes](#cheat-codes)
 
 ## Enter storm from X2goClient (#enter-storm_x2goclient)
 
