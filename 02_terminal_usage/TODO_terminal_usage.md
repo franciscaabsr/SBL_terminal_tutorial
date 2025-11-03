@@ -3,8 +3,12 @@
 Francisca Ayres Ribeiro November 2025
 
 ### Table of contents
-- [Enter storm from X2goClient]
--
+- [Enter storm from X2goClient](#enter-storm_x2goclient)
+- [Open terminal] (#open-terminal)
+- [Check RAM, CPU and computer cores] (#check-ram-cpu-cores)
+- [Basic commands for working in terminal] (#basic-commands)
+- [Work with files and folders] (#files-folders)
+- [Final cheatcodes] (#cheat-codes)
 
 ## Enter storm from X2goClient (#enter-storm_x2goclient)
 
@@ -140,6 +144,93 @@ username@storm:~$ find name_file
 which will output all the possible folders and file paths.
 
 
+## Work with folders and files
+
+Now, let's assume you are within your working folder and you want to create a new folder to put your data in called mydata:
+
+```bash
+username@storm:/home/$ mkdir mydata
+```
+
+If you do *ls* in the terminal you can see that it is created a new folder.
+
+![](images/mkdir_output.png)
+
+Inside this folder you can create any files you want:
+
+```bash
+username@storm:~/$ cd mydata
+username@storm:~/mydata$ touch data_description.txt
+```
+
+which you can fill in how ever you want using:
+
+```bash
+username@storm:~/mydata$ echo "this is my data" > data_description.txt
+username@storm:~/mydata$ cat
+this is my data
+```
+and if you want to edit the file:
+```bash
+username@storm:~/mydata$ nano data_description.txt
+```
+
+![](images/nano_output.png)
+
+Here you can edit anything you want, and make sure to <kbd>^</kbd> + <kbd>O</kbd> to save what you wrote (pressing <kbd>ENTER</kbd> and <kbd>^</kbd> + <kbd>X</kbd> afterwards to exit)
+
+If you want to rename and/or move files:
+
+```bash
+username@storm:~/mydata$ mv data_descprition.txt new_file_name.txt
+username@storm:~/mydata$ mv data_descprition.txt /path/new/location/
+username@storm:~/mydata$ mv * /path/new/location
+```
+where \* means we are moving all the files in the folder. 
+If you want to rename and/or move folders:
+
+```bash
+username@storm:~$ mv /path/to/mydata /path/new/location
+username@storm:~/mydata$ mv data_descprition.txt /path/new/location/
+```
+
+Sometimes we want to copy data from one folder to another and for that we use:
+
+```bash
+username@storm:~$ cp data_description.txt /path/new/location
+username@storm:~$ cp -r mydata /path/new/location
+```
+
+where *-r* means recursively, that is, that it will move all the files of the folder in question.
+Similarly, we can remove files or folders:
+
+```bash
+username@storm:~$ rm data_description.txt
+username@storm:~$ rm -r mydata 
+```
+
+If you want to remove multiple files with similar name and not others you can do:
+```bash
+username@storm:~$ rm mydata/sub-*
+```
+where \* fills in with all possible combintations after sub-.
+
+To check the size of the folder and files you can use:
+
+```bash
+username@storm:/path$ du -h
+```
+![](images/size_files_output.png)
+
+To see the permissions and number of files you have in each folder you can do:
+
+```bash
+username@storm:/path$ ls -lh
+```
+
+![](images/permissions_output.png)
+
+## Final cheatcodes
 
 For the main list of commands you can type:
 
@@ -153,9 +244,6 @@ In case you want to know more about bash commands and all the additions:
 username@storm:~$ man man
 ```
 
-
-
-
 If you want to quit something you are doing you can press <kbd>Ctrl</kbd> + <kbd>C</kbd>. 
 
 **Attention:** Not to be confused with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> which you use if you want to copy something you selected. Correspondly, <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>V</kbd> to paste in the terminal.
@@ -164,12 +252,4 @@ You can also use <kbd>Ctrl</kbd> + <kbd>A</kbd> to jump to the beginning of the 
 
 
 
-## Work with folders and files
 
-To see the permissions you have in each folder you can do:
-
-```bash
-username@storm:~$ ls -lh
-```
-
-![](images/permissions_output.png)
